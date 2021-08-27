@@ -1,6 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:weatherly/utilities/constants.dart';
-import 'package:weatherly/elavated_button.dart';
+import 'package:weatherly/simple_round_button.dart';
 
 class CityScreen extends StatefulWidget {
   @override
@@ -23,12 +25,12 @@ class _CityScreenState extends State<CityScreen> {
         ),
       ),
       body: Container(
-        // decoration: BoxDecoration(
-        //   image: DecorationImage(
-        //     image: AssetImage('images/city_background.jpg'),
-        //     fit: BoxFit.cover,
-        //   ),
-        // ),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('images/background.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
         constraints: BoxConstraints.expand(),
         child: SafeArea(
           child: Column(
@@ -60,9 +62,10 @@ class _CityScreenState extends State<CityScreen> {
                   },
                 ),
               ),
-              SimpleElevatedButton(
-                buttonTitle: 'Get Weather',
-                onTap: () {
+              SimpleRoundButton(
+                backgroundColor: Colors.green,
+                buttonText: Text('Get Weather',style: TextStyle(color: Colors.black,fontStyle: FontStyle.italic, fontWeight: FontWeight.w800, fontSize: 24.0),),
+                onPressed: () {
                   Navigator.pop(context, cityName);  //cityName is the value to be passed backward and is accessed in Navigator.push, in our location screen, as a future value
                 },
               ),

@@ -3,9 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart'; //not a must to be used
 
-const kBottomContainerHeight = 80.0;
-const kBottomContainerColor = const Color(0xFF4CAF50);
-
 const kTempTextStyle = TextStyle(
   fontFamily: 'raleway',
   color: Colors.green,
@@ -16,7 +13,7 @@ const kTempTextStyle = TextStyle(
 const kMessageTextStyle = TextStyle(
   fontFamily: 'notoSerif',
   fontSize: 40.0,
-    color: Color.fromRGBO(240, 255, 255, 50),
+    color: Colors.green,
 );
 
 // const kCityNameTextStyle = TextStyle(
@@ -40,15 +37,6 @@ const kConditionTextStyle = TextStyle(
   fontSize: 90.0,
 );
 
-//constant styling for the get weather button
-const kLargeButtonTextStyle = TextStyle(
-  fontSize: 25.0,
-  color: Colors.black,
-  fontWeight: FontWeight.bold,
-  fontStyle: FontStyle.italic,
-);
-
-
 const kTextFieldInputDecoration = InputDecoration(
   filled: true,
   fillColor: Colors.white,
@@ -56,7 +44,7 @@ const kTextFieldInputDecoration = InputDecoration(
   //   Icons.location_city,
   //   color: Colors.green,
   // ),
-  hintText: 'Enter City Name',
+  hintText: 'Enter City Name...',
   hintStyle: TextStyle(
     fontStyle: FontStyle.italic,
     // fontWeight: FontWeight.w600,
